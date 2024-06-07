@@ -10,11 +10,19 @@ ja:
     new:
       title: ユーザー登録
       to_login_page: ログインページへ
+    create:
+      success: ユーザー登録に成功しました
+      failure: ユーザー登録に失敗しました
   user_sessions:
     new:
       title: ログイン
       to_register_page: ユーザー登録ページへ
       password_forget: パスワードを忘れた場合
+    create:
+      success: ログインに成功しました
+      failure: ログインに失敗しました
+    destroy:
+      success: ログアウトしました
   name_tags:
     new:
       title: ネームタグ新規作成
