@@ -20,7 +20,7 @@
       <a class="btn btn-ghost text-xl">daisyUI</a>
     </div>
     <div class="navbar-end">
-      <%= link_to "ログアウト", logout_path, class: "btn", data: { turbo_method: :delete } %>
+      <%= link_to t(defaults.logout), logout_path, class: "btn", data: { turbo_method: :delete } %>
     </div>
   </div>
 </header>
