@@ -1,0 +1,31 @@
+ja:
+  defaults:
+    login: ログイン
+    register: 登録
+    logout: ログアウト
+    contact: お問い合わせ
+    rules: 利用規約
+    privacy: プライバシーポリシー
+  users:
+    new:
+      title: ユーザー登録
+      to_login_page: ログインページへ
+  user_sessions:
+    new:
+      title: ログイン
+      to_register_page: ユーザー登録ページへ
+      password_forget: パスワードを忘れた場合
+  name_tags:
+    new:
+      title: ネームタグ新規作成
+    index:
+      title: ネームタグ一覧
+    show:
+      title: ネームタグ詳細
+    edit:
+      title: ネームタグ編集
+    bookmarks:
+      title: ブックマーク一覧
+  profiles:
+    show:
+      title: プロフィール
