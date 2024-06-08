@@ -9,3 +9,5 @@ ja:
         password: パスワード
         password_confirmation: パスワード確認
         email: メールアドレス
+      name_tag:
+        

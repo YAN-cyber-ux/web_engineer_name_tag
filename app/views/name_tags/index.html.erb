@@ -1,0 +1,9 @@
+<div class="container mx-auto py-4">
+  <div class="grid grid-cols-2 gap-4">
+    <% if @name_tags.present? %>
+      <%= render @name_tags %>
+    <% else %>
+      <p><%= t('.no_results') %></p>
+    <% end %>
+  </div>
+</div>

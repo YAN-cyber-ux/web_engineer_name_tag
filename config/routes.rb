@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
 
   resources :users, only: [:new, :create]
+  resources :name_tags, only: %i[index]
 end
