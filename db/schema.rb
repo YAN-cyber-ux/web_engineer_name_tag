@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_05_032516) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_08_100735) do
+  create_table "name_tags", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.boolean "publicity", default: true
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_name_tags_on_user_id"
+  end
+
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -21,4 +29,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_05_032516) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "name_tags", "users"
 end
