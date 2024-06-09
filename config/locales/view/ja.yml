@@ -6,6 +6,8 @@ ja:
     contact: お問い合わせ
     rules: 利用規約
     privacy: プライバシーポリシー
+    message:
+      require_login: ログインしてください
   users:
     new:
       title: ユーザー登録
@@ -28,6 +30,7 @@ ja:
       title: ネームタグ新規作成
     index:
       title: ネームタグ一覧
+      no_result: ネームタグがありません
     show:
       title: ネームタグ詳細
     edit:

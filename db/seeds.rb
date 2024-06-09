@@ -7,3 +7,19 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+10.times do
+  User.create(
+    nickname: Faker::Name.name,
+    email: Faker::Internet.email,
+    password: "password",
+    password_confirmation: "password"
+  )
+end
+
+10.times do 
+  NameTag.create(
+    user: User.offset(rand(User.count)).first,
+    publicity: [true, false].sample
+  )
+end
