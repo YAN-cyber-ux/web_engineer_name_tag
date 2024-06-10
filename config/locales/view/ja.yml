@@ -8,8 +8,8 @@ ja:
     privacy: プライバシーポリシー
     message:
       require_login: ログインしてください
-      created: %{item}を作成しました。
-      not_created: %{item}の作成に失敗しました。
+      created: "%{item}を作成しました。"
+      not_created: "%{item}の作成に失敗しました。"
   users:
     new:
       title: ユーザー登録

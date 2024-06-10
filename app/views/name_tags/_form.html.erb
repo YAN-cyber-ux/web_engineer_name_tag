@@ -1,6 +1,6 @@
 <%= form_with model: name_tag, local: true do |f| %>
   <div class="bg-black shadow rounded-lg p-4">
-    <h2 class="text-lg font-semibold"><%= name_tag.user.nickname %></h2>
+    <h2 class="text-lg font-semibold"><%= current_user.nickname %></h2>
   </div>
   <div class="form-group">
     <%= f.label :publicity %>
