@@ -10,4 +10,4 @@ ja:
         password_confirmation: パスワード確認
         email: メールアドレス
       name_tag:
-        
+        publicity: 公開を許可する
