@@ -6,6 +6,7 @@ ja:
     contact: お問い合わせ
     rules: 利用規約
     privacy: プライバシーポリシー
+    edit: 編集
     message:
       require_login: ログインしてください
       created: "%{item}を作成しました。"
@@ -42,3 +43,5 @@ ja:
   profiles:
     show:
       title: プロフィール
+    edit:
+      title: プロフィール編集

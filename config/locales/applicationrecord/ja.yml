@@ -9,5 +9,6 @@ ja:
         password: パスワード
         password_confirmation: パスワード確認
         email: メールアドレス
+        avatar: アバター
       name_tag:
         publicity: 公開を許可する
