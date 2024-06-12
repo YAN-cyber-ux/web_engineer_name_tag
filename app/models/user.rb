@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+  mount_uploader :avatar, AvatarUploader
 
   has_many :name_tags, dependent: :destroy
 
@@ -9,5 +10,4 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true, presence: true
   validates :nickname, presence: true, length: { maximum: 20}
-  #validates :avatar
 end

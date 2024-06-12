@@ -6,10 +6,13 @@ ja:
     contact: お問い合わせ
     rules: 利用規約
     privacy: プライバシーポリシー
+    edit: 編集
     message:
       require_login: ログインしてください
       created: "%{item}を作成しました。"
       not_created: "%{item}の作成に失敗しました。"
+      updated: "%{item}情報を更新しました。"
+      not_updated: "%{item}情報の更新に失敗しました。"
   users:
     new:
       title: ユーザー登録
@@ -42,3 +45,5 @@ ja:
   profiles:
     show:
       title: プロフィール
+    edit:
+      title: プロフィール編集
