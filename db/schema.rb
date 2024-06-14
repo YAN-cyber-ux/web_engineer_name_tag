@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_14_034146) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_14_044828) do
   create_table "logos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "name_tag_logos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "name_tag_id", null: false
+    t.bigint "logo_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["logo_id"], name: "index_name_tag_logos_on_logo_id"
+    t.index ["name_tag_id"], name: "index_name_tag_logos_on_name_tag_id"
   end
 
   create_table "name_tags", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -37,5 +46,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_14_034146) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "name_tag_logos", "logos"
+  add_foreign_key "name_tag_logos", "name_tags"
   add_foreign_key "name_tags", "users"
 end
