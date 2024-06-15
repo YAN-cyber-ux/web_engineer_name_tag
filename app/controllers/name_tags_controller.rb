@@ -10,6 +10,10 @@ class NameTagsController < ApplicationController
   def create
     @name_tag = current_user.name_tags.build(name_tags_params)
     if @name_tag.save
+      logo_ids = params[:name_tag][:logo_ids].reject(&:blank?)
+      logo_ids.each do |logo_id|
+        NameTagLogo.create(name_tag: @name_tag, logo_id: logo_id)
+      end
       redirect_to name_tags_path, success: t('defaults.message.created', item: NameTag.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_created', item: NameTag.model_name.human)
@@ -24,6 +28,6 @@ class NameTagsController < ApplicationController
   private
 
   def name_tags_params
-    params.require(:name_tag).permit(:publicity)
+    params.require(:name_tag).permit(:publicity, logo_ids: [])
   end
 end
