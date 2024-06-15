@@ -23,3 +23,9 @@ end
     publicity: [true, false].sample
   )
 end
+
+Logo.create([
+  { name: "logo_image_sample1.png", image: File.open(Rails.root.join("app/assets/images/logo_image_sample1.png")) },
+  { name: "logo_image_sample2.png", image: File.open(Rails.root.join("app/assets/images/logo_image_sample2.png")) },
+  { name: "logo_image_sample3.png", image: File.open(Rails.root.join("app/assets/images/logo_image_sample3.png")) }
+])
