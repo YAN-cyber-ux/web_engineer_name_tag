@@ -8,8 +8,15 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :logos %>
-    <%= f.collection_select :logo_ids, Logo.all, :id, :name, {}, { multiple: true } %>
+    <%= f.label :logo %><br>
+    <% @logos.each do |logo| %>
+      <%= check_box_tag 'name_tag[logo_ids][]', logo.id, @name_tag.logos.include?(logo), id: "logo_#{logo.id}" %>
+      <%= label_tag "logo_#{logo.id}", logo.name %>
+      <% if logo.image_url.present? %>
+        <%= image_tag logo.image_url, alt: logo.name, class: 'logo-image' %>
+      <% end %>
+      <br>
+    <% end %>
   </div>
 
   <%= f.submit class: 'btn btn-primary' %>
