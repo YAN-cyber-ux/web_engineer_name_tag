@@ -24,8 +24,9 @@ end
   )
 end
 
-Logo.create([
-  { name: "logo_image_sample1.png", image: File.open(Rails.root.join("app/assets/images/logo_image_sample1.png")) },
-  { name: "logo_image_sample2.png", image: File.open(Rails.root.join("app/assets/images/logo_image_sample2.png")) },
-  { name: "logo_image_sample3.png", image: File.open(Rails.root.join("app/assets/images/logo_image_sample3.png")) }
-])
+# Tag.create(name: 'Tag_1', image_url: ActionController::Base.helpers.asset_path('tag1.png'))
+# Tag.create(name: 'Tag_2', image_url: ActionController::Base.helpers.asset_path('tag2.png'))
+
+Logo.create(
+  name: 'Ruby', image_url: ActionController::Base.helpers.asset_path('Ruby.png')
+)
