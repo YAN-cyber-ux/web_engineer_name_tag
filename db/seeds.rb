@@ -23,3 +23,10 @@ end
     publicity: [true, false].sample
   )
 end
+
+# Tag.create(name: 'Tag_1', image_url: ActionController::Base.helpers.asset_path('tag1.png'))
+# Tag.create(name: 'Tag_2', image_url: ActionController::Base.helpers.asset_path('tag2.png'))
+
+Logo.create(
+  name: 'Ruby', image_url: ActionController::Base.helpers.asset_path('Ruby.png')
+)
