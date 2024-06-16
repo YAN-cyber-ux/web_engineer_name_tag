@@ -19,7 +19,6 @@ class NameTagsController < ApplicationController
   def create
     @name_tag = current_user.name_tags.build(name_tags_params)
     if @name_tag.save
-      end
       redirect_to name_tags_path, success: t('defaults.message.created', item: NameTag.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_created', item: NameTag.model_name.human)
