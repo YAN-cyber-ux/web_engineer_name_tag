@@ -28,5 +28,5 @@ end
 # Tag.create(name: 'Tag_2', image_url: ActionController::Base.helpers.asset_path('tag2.png'))
 
 Logo.create(
-  name: 'Ruby', image_url: "s3://web-engineer-name-tag/assets/images/ruby.png"
+  name: 'Ruby', image_url: "https://web-engineer-name-tag.s3.ap-northeast-1.amazonaws.com/assets/images/ruby.png"
 )
