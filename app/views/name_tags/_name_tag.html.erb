@@ -2,7 +2,7 @@
   <h2 class="text-lg font-semibold"><%= name_tag.user.nickname %></h2>
   <% name_tag.logos.each do |logo| %>
     <div class="logo">
-      <%= image_tag logo.image_url, alt: logo.name %>
+      <%= image_tag logo.image_url.url, alt: logo.name %>
     </div>
   <% end %>
 </div>
